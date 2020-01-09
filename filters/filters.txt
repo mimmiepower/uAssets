@@ -1566,13 +1566,14 @@ yourbittorrent.com##[href*=".premium"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3895
 ||sun.torrentfunk.com^$frame
-torrentfunk.com##+js(abort-on-property-read.js, Date.prototype.toUTCString)
-torrentfunk.com##+js(abort-on-property-write.js, bidrev)
-torrentfunk.com##+js(abort-on-property-write.js, Fingerprint2)
-torrentfunk.com##+js(nowebrtc.js)
+torrentfunk.com, torrentfunk2 ##+js(abort-on-property-read.js, Date.prototype.toUTCString)
+torrentfunk.com, torrentfunk2 ##+js(abort-on-property-write.js, bidrev)
+torrentfunk.com, torrentfunk2 ##+js(abort-on-property-write.js, Fingerprint2)
+torrentfunk.com, torrentfunk2 ##+js(nowebrtc.js)
 ||torrentfunk.com/s1w.js$script,1p
-torrentfunk.com##[href*=".premium"]
-torrentfunk.com##:xpath(//strong[contains(text(),"VPN")]/../../..)
+||torrentfunk2.com/s1w.js$script,1p
+torrentfunk.com, torrentfunk2 ##[href*=".premium"]
+torrentfunk.com, torrentfunk2 ##:xpath(//strong[contains(text(),"VPN")]/../../..)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/565
 ville-ideale.fr##+js(setTimeout-defuser.js, contrformpub, 5000)
@@ -23262,7 +23263,6 @@ shortbitsfree.net##.banner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6780
 1tamilmv.*##+js(acis, Math, zfgloaded)
-1tamilmv.*##+js(aopw, _pop)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6781
 @@||the-man.gr^$ghide
